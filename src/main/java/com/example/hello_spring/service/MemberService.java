@@ -9,11 +9,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service // spring 컨테이너에 등록하여 Autowired가 찾을 수 있게
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired // spring 컨테이너에 있는 memeberRepository
     public MemberService(MemberRepository memberRepository) { // 외부에서 생성 DI
         this.memberRepository = memberRepository;
     }
